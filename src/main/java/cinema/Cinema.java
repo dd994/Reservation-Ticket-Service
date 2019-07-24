@@ -1,10 +1,19 @@
-package cinema;
+package main.java.cinema;
+
+import java.util.List;
 
 public class Cinema {
     private String name;
     private String adress;
-    private String movieList;
+    private List movieList;
     private double rating;
+
+    public Cinema(String name, String adress, List movieList, double rating) {
+        this.name = name;
+        this.adress = adress;
+        this.movieList = movieList;
+        this.rating = rating;
+    }
 
     public String getName() {
         return name;
@@ -22,11 +31,11 @@ public class Cinema {
         this.adress = adress;
     }
 
-    public String getMovieList() {
+    public List getMovieList() {
         return movieList;
     }
 
-    public void setMovieList(String movieList) {
+    public void setMovieList(List movieList) {
         this.movieList = movieList;
     }
 
