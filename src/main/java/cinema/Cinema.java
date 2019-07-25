@@ -47,6 +47,14 @@ public class Cinema {
         this.rating = rating;
     }
 
-
+    @Override
+    public String toString() {
+        return "Cinema{" +
+                "name='" + name + '\'' +
+                ", adress='" + adress + '\'' +
+                ", movieList=" + movieList +
+                ", rating=" + rating +
+                '}';
+    }
 }
 //2.	Cinema - name, Address, rating, list of movies

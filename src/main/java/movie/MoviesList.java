@@ -8,7 +8,18 @@ import static main.java.hall.Halls.*;
 public class MoviesList {
     private List<Movie> movies = new ArrayList();
 
-    public List cinemaOneList() {
+    public List<Movie> getMovies() {
+        return movies;
+    }
+
+    @Override
+    public String toString() {
+        return "MoviesList{" +
+                "movies=" + movies +
+                '}';
+    }
+
+    public List cinemaOneMovieList() {
         movies.add(new Movie("Batman", hallOne, "Original", MovieStatus.AVAILABLE, Genres.ACTION, new Movie.Duration(10.00, 12.00), 100));
         movies.add(new Movie("Ironman", hallTwo, "Translated", MovieStatus.PREMIER, Genres.ACTION, new Movie.Duration(10.00, 12.00), 100));
         movies.add(new Movie("Spiderman", hallThree, "Original", MovieStatus.PREMIER, Genres.ACTION, new Movie.Duration(10.00, 12.00), 100));
@@ -33,7 +44,7 @@ public class MoviesList {
         return movies;
     }
 
-    public List cinemaTwoList() {
+    public List cinemaTwoMovieList() {
         movies.add(new Movie("Mad Max: Fury Road", hallOne, "Original", MovieStatus.AVAILABLE, Genres.ACTION, new Movie.Duration(10.00, 12.00), 100));
         movies.add(new Movie("The Truman Show", hallTwo, "Translated", MovieStatus.PREMIER, Genres.COMEDY, new Movie.Duration(10.00, 12.00), 100));
         movies.add(new Movie("Spiderman", hallThree, "Original", MovieStatus.PREMIER, Genres.ACTION, new Movie.Duration(10.00, 12.00), 95));
@@ -59,7 +70,7 @@ public class MoviesList {
 
     }
 
-    public List cinemaThreeList() {
+    public List cinemaThreeMovieList() {
         movies.add(new Movie("Batman", hallOne, "Original", MovieStatus.AVAILABLE, Genres.ACTION, new Movie.Duration(10.00, 12.00), 90));
         movies.add(new Movie("Ironman", hallTwo, "Translated", MovieStatus.PREMIER, Genres.ACTION, new Movie.Duration(10.00, 12.00), 95));
         movies.add(new Movie("Spiderman", hallThree, "Original", MovieStatus.PREMIER, Genres.ACTION, new Movie.Duration(10.00, 12.00), 1200));

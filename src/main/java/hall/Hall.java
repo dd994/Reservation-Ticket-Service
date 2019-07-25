@@ -35,7 +35,14 @@ public void setLevel(HallType level) {
         this.level = level;
         }
 
-
+        @Override
+        public String toString() {
+                return "Hall{" +
+                        "hallNumber=" + hallNumber +
+                        ", placesAmount=" + placesAmount +
+                        ", level=" + level +
+                        '}';
+        }
 
 //        }
 

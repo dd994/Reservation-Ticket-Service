@@ -85,6 +85,27 @@ public class Movie {
             this.from = from;
             this.to = to;
         }
+
+        @Override
+        public String toString() {
+            return "Duration{" +
+                    "from=" + from +
+                    ", to=" + to +
+                    '}';
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "Movie{" +
+                "movie='" + movie + '\'' +
+                ", roomNumber=" + roomNumber +
+                ", movieType='" + movieType + '\'' +
+                ", movieStatus=" + movieStatus +
+                ", movieCategory=" + movieCategory +
+                ", movieDuration=" + movieDuration +
+                ", ticketPrice=" + ticketPrice +
+                '}';
     }
 }
 
