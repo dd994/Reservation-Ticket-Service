@@ -3,30 +3,34 @@ package main.java.movie;
 import main.java.hall.Hall;
 
 public class Movie {
-    private String movie;
+    private String name;
     private Hall roomNumber;
     private String movieType;
     private MovieStatus movieStatus;
     private Genres movieCategory;
     private Duration movieDuration;
     private double ticketPrice;
+    private double movieRating;
 
-    Movie(String movie, Hall roomNumber, String movieType, MovieStatus movieStatus, Genres movieCategory, Duration movieDuration, double ticketPrice) {
-        this.movie = movie;
+
+
+    Movie(String movie, Hall roomNumber, String movieType, MovieStatus movieStatus, Genres movieCategory, Duration movieDuration, double ticketPrice, double movieRating) {
+        this.name = movie;
         this.roomNumber = roomNumber;
         this.movieType = movieType;
         this.movieStatus = movieStatus;
         this.movieCategory = movieCategory;
         this.movieDuration = movieDuration;
         this.ticketPrice = ticketPrice;
+        this.movieRating = movieRating;
     }
 
-    public String getMovie() {
-        return movie;
+    public String getName() {
+        return name;
     }
 
     public void setMovie(String movie) {
-        this.movie = movie;
+        this.name = movie;
     }
 
     public Hall getRoomNumber() {
@@ -77,6 +81,12 @@ public class Movie {
         this.movieCategory = movieCategory;
     }
 
+
+    public double getMovieRating() {
+        return movieRating;
+    }
+
+
     static class Duration {
         private double from;
         private double to;
@@ -98,7 +108,7 @@ public class Movie {
     @Override
     public String toString() {
         return "Movie{" +
-                "movie='" + movie + '\'' +
+                "movie='" + name + '\'' +
                 ", roomNumber=" + roomNumber +
                 ", movieType='" + movieType + '\'' +
                 ", movieStatus=" + movieStatus +

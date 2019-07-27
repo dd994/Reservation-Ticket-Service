@@ -7,15 +7,12 @@ import java.util.List;
 
 
 public class CinemaChoicer implements CinemaOperations {
-
+    private CinemaChoicer cinemaChoicer;
     private Cinema cinema;
     private CinemaList cinemaList = new CinemaList();
     private List<Cinema> cinemas = new ArrayList<>();
-    private List movies;
 
-    public List getMovies() {
-        return movies;
-    }
+
 
     public Cinema getCinema() {
         return cinema;
@@ -25,13 +22,23 @@ public class CinemaChoicer implements CinemaOperations {
         return cinemas;
     }
 
+
+    int choice;
+    public int choiser(){
+        return this.choice;
+    }
+
     @Override
-    public List<Movie> choiceTheCinema(int choice) {
-        movies = new ArrayList<>();
-        cinemas.addAll(cinemaList.getCinemaList()); //take all cinemas , which we created
-        cinema = cinemas.get(choice);  // take one cinema, which chosen client
+    public Cinema choiceTheCinema() {
+        cinemas.addAll(cinemaList.getCinemaList());
+        cinema = cinemas.get(1);
+        return cinema;
+    }
+
+    public List<Movie> moviesOfSelectedCinema(){
+        choiceTheCinema();
         System.out.println("Your choice is a cinema: " + cinema.getName() + " by adress " + cinema.getAdress());
-        movies = cinemas.get(choice).getMovieList(); // take the list of movies, in the chosen cinema
+        List<Movie> movies = cinema.getMovieList();
         return movies;
     }
 
