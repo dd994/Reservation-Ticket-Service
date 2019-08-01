@@ -7,9 +7,9 @@ import java.util.List;
 
 
 public class CinemaList {
-    private Cinema cinemaOne = new Cinema("MostKino", "Dnipro, Glinky 2", new MoviesList().cinemaOneMovieList(), 4);
-    private Cinema cinemaTwo = new Cinema("Multiplex", "Dnipro, bul. Zorianiy 1", new MoviesList().cinemaTwoMovieList(), 5);
-    private Cinema cinemaThree = new Cinema("Karavan", "Dnipro, Donetske sh., 10", new MoviesList().cinemaThreeMovieList(), 4);
+    private Cinema cinemaOne = new Cinema("MostCinema", "Dnipro, Glinky st., b.2", new MoviesList().cinemaOneMovieList(), 4);
+    private Cinema cinemaTwo = new Cinema("Multiplex", "Dnipro, bul. Zorianiy, b.1", new MoviesList().cinemaTwoMovieList(), 5);
+    private Cinema cinemaThree = new Cinema("21th Century Cinema", "Dnipro, Donetske sh., b.10", new MoviesList().cinemaThreeMovieList(), 4);
 
     public Cinema getCinemaOne() {
         return cinemaOne;

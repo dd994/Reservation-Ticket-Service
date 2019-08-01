@@ -8,6 +8,13 @@ public class Booking {
     private String bookedMovies;
     private  double amount;
 
+    public Booking(LocalDate date, String status, String bookedMovies, double amount) {
+        this.date = date;
+        this.status = status;
+        this.bookedMovies = bookedMovies;
+        this.amount = amount;
+    }
+
     public LocalDate getDate() {
         return date;
     }
@@ -38,6 +45,13 @@ public class Booking {
 
     public void setAmount(double amount) {
         this.amount = amount;
+    }
+
+
+    public Booking booking(){
+
+
+        return  booking();
     }
 }
 
