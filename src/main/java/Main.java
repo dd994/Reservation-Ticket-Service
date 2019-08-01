@@ -45,13 +45,15 @@ public class Main {
         //print the movie list
         System.out.println("If you want to see this  list  of movies - press any key");
         System.in.read();
-        cinemaChoicer.moviesOfSelectedCinema();
+        System.out.println(cinemaChoicer.moviesNamesOfSelectedCinema());
 
 
         // choice the way of movie searching
+        System.out.println("If you want search by category - press 1, by rating - press 2");
         MovieSearch movieSearch = new MovieSearch();
-        System.out.println(movieSearch.searchMovieByCategory(Genres.COMEDY));
-//        System.out.println(movieSearch.searchMovieByRating(4.7));
+        int searchWayNumber = scan.nextInt();
+        movieSearch.searchScript(searchWayNumber);
+
 
 
         //places visualisation

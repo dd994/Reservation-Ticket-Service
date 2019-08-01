@@ -1,8 +1,10 @@
 package main.java.cinema;
 
 import main.java.movie.Movie;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class CinemaChoicer implements CinemaOperations {
     private Cinema cinema;
@@ -26,6 +28,12 @@ public class CinemaChoicer implements CinemaOperations {
         choiceTheCinema();
         List<Movie> movies = cinema.getMovieList();
         return movies;
+    }
+
+    public List<String> moviesNamesOfSelectedCinema(){
+        return moviesOfSelectedCinema().stream()
+                .map(Movie::getName)
+                .collect(Collectors.toList());
     }
 
 

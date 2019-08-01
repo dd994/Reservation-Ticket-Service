@@ -1,9 +1,9 @@
 package main.java.movie;
 
-import java.util.List;
+import java.util.Map;
 
 public interface MovieSearcher {
-    List<String> searchMovieByCategory(Genres category);
-    List<String> searchMovieByRating(Double rating);
+    Map<Integer, String> searchMovieByCategory(Genres category);
+    Object searchMovieByRating(double rating);
 
 }
